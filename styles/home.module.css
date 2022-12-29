@@ -1,0 +1,66 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigationContainer {
+  font-size: 1.4rem;
+  gap: 36px;
+}
+
+.name {
+  display: inline-block;
+  font-size: 72px;
+  font-weight: 300;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.title {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 300;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.intro {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  color: #fff;
+  gap: 16px;
+  line-height: 1.25;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 200vh;
+  bottom: -210px;
+  left: -60px;
+  background-color: #f00;
+  opacity: 50%;
+}
+
+.logo {
+  object-fit: cover;
+  z-index: 9;
+}
+
+.introTextContainer {
+  padding-bottom: 12px;
+}
