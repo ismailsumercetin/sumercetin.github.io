@@ -49,10 +49,11 @@
   content: '';
   position: absolute;
   width: 120px;
-  height: 200vh;
-  bottom: -210px;
+  height: 100vh;
+  bottom: -250px;
   left: -60px;
-  background-color: #f00;
+  background: rgb(255,0,0);
+  background: linear-gradient(0deg, rgba(255,0,0,0.013064600840336116) 0%, rgba(255,0,0,1) 35%, rgba(255,0,0,1) 100%);
   opacity: 50%;
 }
 
