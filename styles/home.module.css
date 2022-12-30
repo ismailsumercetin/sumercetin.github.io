@@ -57,6 +57,30 @@
   opacity: 50%;
 }
 
+@media only screen and (max-width: 600px) {
+  .intro {
+    flex-direction: column !important;
+    gap: 0;
+    transform: translate(-50%, -130%);
+  }
+  .intro::before {
+    left: unset;
+    width: 130px;
+    z-index: -1;
+    bottom: -200px;
+  }
+  .name {
+    font-size: 48px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .introTextContainer {
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+
 .logo {
   object-fit: cover;
   z-index: 9;

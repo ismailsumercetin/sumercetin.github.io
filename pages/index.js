@@ -9,6 +9,7 @@ export default function Home() {
     <HomeLayout>
       <Head>
         <title>Sümer Çetin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <IntroSection />
     </HomeLayout>
