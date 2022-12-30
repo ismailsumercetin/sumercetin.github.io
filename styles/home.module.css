@@ -84,8 +84,32 @@
 .logo {
   object-fit: cover;
   z-index: 9;
+  -webkit-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.75);
 }
 
 .introTextContainer {
   padding-bottom: 12px;
+}
+
+.linkContainer {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, 180%);
+  color: #fff;
+}
+
+.linkContainer a {
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 2px solid red;
+  padding-bottom: 6px;
+  font-weight: 300;
+}
+
+.linkContainer a:not(:last-child) {
+  margin-right: 42px;
 }
