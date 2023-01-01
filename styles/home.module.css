@@ -79,6 +79,14 @@
     text-align: center;
     line-height: 1.6;
   }
+  .linkContainer {
+    transform: translate(-50%, 30%) !important;
+    gap: 72px !important;
+  }
+  .linkContainer div {
+    justify-content: space-between;
+    gap: 72px !important;
+  }
 }
 
 .logo {
@@ -98,18 +106,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-52%, 180%);
+  transform: translate(-36%, 180%);
   color: #fff;
+  gap: 42px;
 }
 
 .linkContainer a {
   color: #fff;
   font-size: 18px;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.5);
   padding-bottom: 6px;
   font-weight: 300;
-}
-
-.linkContainer a:not(:last-child) {
-  margin-right: 42px;
 }

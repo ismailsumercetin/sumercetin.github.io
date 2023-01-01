@@ -4,6 +4,8 @@ import Image from 'next/image';
 import HomeLayout from '../components/homelayout';
 import homeStyles from '../styles/home.module.css';
 import utilStyles from '../styles/utils.module.css';
+import { useEffect, useState } from 'react';
+import { render } from 'react-dom';
 
 export default function Home() {
   return (
@@ -40,11 +42,37 @@ const IntroSection = () => {
 };
 
 const LinkSection = () => {
+  const [isSmallLayout, setIsSmallLayout] = useState();
+  const dummyfunction = e => setIsSmallLayout(e.target.innerWidth < 601);
+  useEffect(() => {
+    setIsSmallLayout(window.innerWidth < 600);
+    window.addEventListener('resize', dummyfunction);
+    return () => window.removeEventListener('resize', dummyfunction);
+  }, []);
+
+  const LINKS = [
+    <Link key="about" href="#">About</Link>,
+    <Link key="work" href="#">Work</Link>,
+    <Link key="projects" href="#">Projects</Link>,
+    <Link key="contact" href="#">Contact</Link>
+  ];
+
+  const renderSmallLayout = () => (
+    <>
+      <div className={`${utilStyles.col}`}>
+        {LINKS.slice(0, 2).map(l => l)}
+      </div>
+      <div className={`${utilStyles.col}`}>
+        {LINKS.slice(2, 4).map(l => l)}
+      </div>
+    </>
+  );
+
   return (
     <nav className={`${utilStyles.row} ${homeStyles.linkContainer}`}>
-      <Link href="#">About</Link>
-      <Link href="#">Work</Link>
-      <Link href="#">Projects</Link>
+      {
+        isSmallLayout ? renderSmallLayout() : LINKS.map(l => l)
+      }
     </nav>
   );
 };
