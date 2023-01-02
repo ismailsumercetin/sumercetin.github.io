@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    cursor: pointer;
 }
 
 .hamburgerButtonLine {
@@ -44,4 +45,8 @@
     align-items: center;
     justify-content: center;
     font-size: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
