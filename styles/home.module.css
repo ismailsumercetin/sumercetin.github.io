@@ -100,10 +100,10 @@
   white-space: nowrap;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50.9%;
   transform: translate(-36%, 180%);
   color: #fff;
-  gap: 42px;
+  gap: 56px;
 }
 
 .linkContainer a {
