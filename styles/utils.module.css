@@ -10,6 +10,24 @@
 }
 
 .navigationContainer {
-  font-size: 1.4rem;
-  gap: 36px;
+  font-size: 16px;
+  gap: 48px;
+}
+
+.navigationContainer a {
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  justify-content: space-between;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
 }

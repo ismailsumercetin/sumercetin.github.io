@@ -5,11 +5,6 @@
   justify-content: space-between;
 }
 
-.navigationContainer {
-  font-size: 1.4rem;
-  gap: 36px;
-}
-
 .name {
   display: inline-block;
   font-size: 72px;
