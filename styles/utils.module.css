@@ -12,6 +12,7 @@
 .navigationContainer {
   font-size: 16px;
   gap: 48px;
+  margin-right: 18px;
 }
 
 .navigationContainer a {
@@ -19,7 +20,7 @@
 }
 
 .container {
-  width: 60%;
+  max-width: 46rem;
   margin: 0 auto;
 }
 
