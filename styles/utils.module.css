@@ -10,13 +10,29 @@
 }
 
 .navigationContainer {
-  font-size: 16px;
+  font-size: 18px;
   gap: 48px;
   margin-right: 18px;
 }
 
 .navigationContainer a {
-  color: #fff;
+  position: relative;
+  z-index: 0;
+}
+
+.navigationContainer a::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  background-color: rgba(255, 0, 0, .25);
+  width: 90%;
+  height: 8px;
+}
+
+.activeLink::after {
+  background-color: rgba(255, 0, 0, .5) !important;
 }
 
 .container {
@@ -26,6 +42,8 @@
 
 .header {
   justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+  margin-bottom: 24px;
 }
 
 .logo {

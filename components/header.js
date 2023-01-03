@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Link from 'next/link';
 import Image from 'next/image';
 import MenuSection from './menusection';
@@ -7,13 +8,16 @@ import utilStyles from '../styles/utils.module.css';
 export default function Header() {
   const renderLinks = () => {
     const isSmall = isSmallLayout();
-    console.log
+    const isActiveClass = path => {
+      const currentPath = useRouter().asPath;
+      return currentPath === path ? `${utilStyles.activeLink}` : '';
+    };
     const linkSection = (
       <nav className={`${utilStyles.row} ${utilStyles.navigationContainer}`}>
-        <Link href="/about">About</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact</Link>
+        <Link className={`${isActiveClass('/about')}`} href="/about">About</Link>
+        <Link className={`${isActiveClass('/work')}`} href="/work">Work</Link>
+        <Link className={`${isActiveClass('/projects')}`} href="/projects">Projects</Link>
+        <Link className={`${isActiveClass('/contact')}`} href="/contact">Contact</Link>
       </nav>
     );
     return ( isSmall ? <MenuSection /> : linkSection)

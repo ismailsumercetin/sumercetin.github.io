@@ -35,7 +35,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -80%);
-  color: #fff;
   gap: 16px;
   line-height: 1.25;
 }
@@ -102,12 +101,10 @@
   top: 50%;
   left: 50.9%;
   transform: translate(-36%, 180%);
-  color: #fff;
   gap: 56px;
 }
 
 .linkContainer a {
-  color: #fff;
   font-size: 18px;
   border-bottom: 2px solid rgba(255, 0, 0, 0.5);
   padding-bottom: 6px;

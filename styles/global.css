@@ -11,10 +11,10 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #fff;
 }
 
 a {
-  color: #f00;
   text-decoration: none;
 }
 

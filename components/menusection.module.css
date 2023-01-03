@@ -1,11 +1,10 @@
 .menuSection {
-   color: white;
    margin-right: 18px;
 }
 
 .opened {
     position:fixed;
-
+    z-index: 999999;
     top:0;
     left:0;
 
