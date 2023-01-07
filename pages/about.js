@@ -4,6 +4,17 @@ import utilStyles from '../styles/utils.module.css';
 import aboutStyles from '../styles/about.module.css';
 import Link from 'next/link';
 
+const SKILL_LIST = [
+  'HTML5',
+  'CSS3 (SASS - SCSS)',
+  'Javascript',
+  'React',
+  'Redux',
+  'Styled Components',
+  'Git',
+  'SQL (MySQL)'
+];
+
 export default function About() {
   return (
     <>
@@ -19,20 +30,41 @@ export default function About() {
       `}</style>
       <Header />
       <div className={`${utilStyles.container}`}>
-        <section className={`${aboutStyles.section} ${aboutStyles.row}`}>
-          <Image
+        <section className={`${aboutStyles.section}`}>
+          {/* <Image
             className={`${aboutStyles.myImage}`}
             src="/images/me.png"
             height={260}
             width={400}
             alt="Sümer Çetin"
-          />
+          /> */}
           <article className={`${aboutStyles.article}`}>
-            <p>Hi. My name is <Link href="/" className={`${aboutStyles.myName}`}>Sümer</Link>.</p>
+            <p>Hi. My name is <Link href="/" className={`${aboutStyles.myName} ${utilStyles.underlinedLink}`}>Sümer</Link>.</p>
             <p>
-              I am a frontend developer with 2+ years of experience.
+              I am a software developer with 2+ years of experience.
+              I am currently working as Frontend Developer at Jotform, a US-based company for building online forms.
+            </p>
+            <p>
+              I am curious about web technologies and trends.
+              I love learning new things, use them to solve real world problems and share my knowledge with people around me.
+              Being part of a motivated team always pushes me to do better and enjoy my work more.
+            </p>
+            <p>
+              I have a strong interest in below topics:
+              <ul className={`${aboutStyles.interestsList}`}>
+                <li>Fullstack Web Development</li>
+                <li>Software Design</li>
+                <li>SOLID Principles / Design Patterns</li>
+                <li>Web Design</li>
+              </ul>
             </p>
           </article>
+        </section>
+        <section className={`${aboutStyles.section} ${aboutStyles.technologySection}`}>
+          <p>Techologies I Use</p>
+          <div className={`${aboutStyles.technologyContainer} ${utilStyles.row}`}>
+            {SKILL_LIST.map(s => <span>{s}</span>)}
+          </div>
         </section>
       </div>
     </>
