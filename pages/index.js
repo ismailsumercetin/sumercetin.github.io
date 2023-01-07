@@ -44,10 +44,10 @@ const LinkSection = () => {
   const isSmall = isSmallLayout();
 
   const LINKS = [
-    <Link key="about" href="/about">About</Link>,
-    <Link key="work" href="#">Work</Link>,
-    <Link key="projects" href="#">Projects</Link>,
-    <Link key="contact" href="#">Contact</Link>
+    <Link key="about" className={`${utilStyles.underlinedLink}`} href="/about">About</Link>,
+    <Link key="work" className={`${utilStyles.underlinedLink}`} href="#">Work</Link>,
+    <Link key="projects" className={`${utilStyles.underlinedLink}`} href="#">Projects</Link>,
+    <Link key="contact" className={`${utilStyles.underlinedLink}`} href="#">Contact</Link>
   ];
 
   const renderSmallLayout = () => (
