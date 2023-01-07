@@ -46,8 +46,7 @@
   height: 200vh;
   bottom: -250px;
   left: -60px;
-  background: rgb(255,0,0);
-  background: linear-gradient(0deg, rgba(255,0,0,0.013064600840336116) 0%, rgba(255,0,0,1) 35%, rgba(255,0,0,1) 100%);
+  background: linear-gradient(0deg, rgba(234, 15, 30,0.013064600840336116) 0%, rgba(234, 15, 30,1) 35%, rgba(234, 15, 30,1) 100%);
   opacity: 50%;
 }
 
@@ -96,6 +95,7 @@
 }
 
 .linkContainer {
+  margin-top: 24px;
   white-space: nowrap;
   position: absolute;
   top: 50%;
@@ -105,8 +105,5 @@
 }
 
 .linkContainer a {
-  font-size: 18px;
-  border-bottom: 2px solid rgba(255, 0, 0, 0.5);
-  padding-bottom: 6px;
   font-weight: 300;
 }
