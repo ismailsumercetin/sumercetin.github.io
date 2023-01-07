@@ -1,1 +1,1 @@
-Sümer Çetin | Frontend Developer
+Sümer Çetin | Software Developer

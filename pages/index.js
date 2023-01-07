@@ -32,7 +32,7 @@ const IntroSection = () => {
         />
         <div className={`${utilStyles.col} ${homeStyles.introTextContainer}`}>
           <span className={`${homeStyles.name}`}>Sümer Çetin</span>
-          <span className={`${homeStyles.title}`}>Frontend Developer</span>
+          <span className={`${homeStyles.title}`}>Software Developer</span>
         </div>
       </div>
       <LinkSection />

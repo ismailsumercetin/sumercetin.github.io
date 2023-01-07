@@ -13,6 +13,10 @@
   gap: 48px;
 }
 
+.navigationContainer a {
+  z-index: 1;
+}
+
 .container {
   max-width: 46rem;
   margin: 0 auto;
@@ -34,7 +38,7 @@
 }
 
 .underlinedLink::after {
-  z-index: 0;
+  z-index: -1;
   content: '';
   position: absolute;
   top: 16px;
@@ -46,4 +50,10 @@
 
 .activeLink::after {
   background-color: rgba(234, 15, 30, .5);
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    margin-bottom: 40px;
+  }
 }
