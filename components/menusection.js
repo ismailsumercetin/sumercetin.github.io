@@ -21,6 +21,7 @@ const CloseButton = ({ isMenuOpened, setIsMenuOpened }) => {
     return (
         <div className={`${styles.closeButton}`}>
             <Image
+                style={{ cursor: 'pointer' }}
                 src="/images/close-icon.svg"
                 height={36}
                 width={36}
