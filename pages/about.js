@@ -10,9 +10,12 @@ const SKILL_LIST = [
   'Javascript',
   'React',
   'Redux',
+  'Next.js',
   'Styled Components',
   'Git',
-  'SQL (MySQL)'
+  'SQL (MySQL)',
+  'NPM',
+  'PNPM'
 ];
 
 export default function About() {
@@ -65,6 +68,28 @@ export default function About() {
           <div className={`${aboutStyles.technologyContainer} ${utilStyles.row}`}>
             {SKILL_LIST.map(s => <span>{s}</span>)}
           </div>
+        </section>
+        <section className={`${aboutStyles.section} ${aboutStyles.resumeSection}`}>
+          <p className={`${utilStyles.row}`}>
+            <Image
+              className={`${aboutStyles.fadeOutRight}`}
+              src="/images/arrow-right.svg"
+              height={24}
+              width={18}
+              alt="arrow-right"
+            />
+            <Link href="/files/sumercetin.pdf" target="_blank" className={`${aboutStyles.resume} ${utilStyles.underlinedLink}`}>Click To See My CV</Link>
+          </p>
+          <p className={`${utilStyles.row}`}>
+            <Image
+              className={`${aboutStyles.fadeOutRight}`}
+              src="/images/arrow-right.svg"
+              height={24}
+              width={18}
+              alt="arrow-right"
+            />
+            <Link href="/files/sumercetin_transcript.pdf" target="_blank" className={`${aboutStyles.transcript} ${utilStyles.underlinedLink}`}>Click To See My Transcript</Link>
+          </p>
         </section>
       </div>
     </>

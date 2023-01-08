@@ -14,8 +14,8 @@
     padding: 0 24px 0 24px;
 }
 
-.section:not(.technologySection) {
-    margin-bottom: 36px;
+.section {
+    margin-bottom: 72px;
 }
 
 .myName {
@@ -57,4 +57,43 @@
 .technologySection .technologyContainer span {
     border-left: 4px solid rgba(234, 15, 30, .5);
     padding-left: 8px;
+}
+
+.fadeOutRight {
+  animation: fadeOutRight 1.5s ease infinite;
+}
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.resumeSection p {
+    align-items: unset;
+    gap: 20px;
+}
+
+.resumeSection p:nth-child(1) {
+    margin-bottom: 16px;
+}
+
+.resumeSection .resume, .resumeSection .transcript {
+    z-index: 1;
+    position: relative;
+}
+
+.resumeSection .resume::after {
+    left: 24px;
+    height: 10px;
+}
+
+.resumeSection .transcript::after {
+    left: 20px;
+    width: 95%;
+    height: 10px;
 }
