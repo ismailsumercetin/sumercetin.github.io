@@ -11,6 +11,7 @@
 
 .navigationContainer {
   gap: 48px;
+  margin-right: 24px;
 }
 
 .navigationContainer a {

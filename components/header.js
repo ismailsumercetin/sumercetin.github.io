@@ -4,20 +4,17 @@ import Image from 'next/image';
 import MenuSection from './menusection';
 import isSmallLayout from '../hooks/isSmallLayout';
 import utilStyles from '../styles/utils.module.css';
+import * as Utils from '../utils';
 
 export default function Header() {
   const renderLinks = () => {
     const isSmall = isSmallLayout();
-    const isActiveClass = path => {
-      const currentPath = useRouter().asPath;
-      return currentPath === path ? `${utilStyles.activeLink}` : '';
-    };
     const linkSection = (
       <nav className={`${utilStyles.row} ${utilStyles.navigationContainer}`}>
-        <Link className={`${isActiveClass('/about')} ${utilStyles.underlinedLink}`} href="/about">About</Link>
-        <Link className={`${isActiveClass('/work')} ${utilStyles.underlinedLink}`} href="#">Work</Link>
-        <Link className={`${isActiveClass('/projects')} ${utilStyles.underlinedLink}`} href="#">Projects</Link>
-        <Link className={`${isActiveClass('/contact')} ${utilStyles.underlinedLink}`} href="#">Contact</Link>
+        <Link className={`${Utils.isActiveClass('/about')} ${utilStyles.underlinedLink}`} href="/about">About</Link>
+        <Link className={`${Utils.isActiveClass('/work')} ${utilStyles.underlinedLink}`} href="#">Work</Link>
+        <Link className={`${Utils.isActiveClass('/projects')} ${utilStyles.underlinedLink}`} href="#">Projects</Link>
+        <Link className={`${Utils.isActiveClass('/contact')} ${utilStyles.underlinedLink}`} href="#">Contact</Link>
       </nav>
     );
     return ( isSmall ? <MenuSection /> : linkSection)
