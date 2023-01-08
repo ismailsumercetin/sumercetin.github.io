@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './menusection.module.css';
 import utilStyles from '../styles/utils.module.css';
 import * as Utils from '../utils';
+import Image from 'next/image';
 
 const HamburgerButton = () => {
     return (
@@ -19,23 +20,35 @@ const toggleMenu = (isMenuOpened, setIsMenuOpened) => isMenuOpened && setIsMenuO
 const CloseButton = ({ isMenuOpened, setIsMenuOpened }) => {
     return (
         <div className={`${styles.closeButton}`}>
-            <span className={`${styles.closeButtonText}`} onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)}>
-                X
-            </span>
+            <Image
+                src="/images/close-icon.svg"
+                height={36}
+                width={36}
+                alt="Close Icon"
+                onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)}
+            />
         </div>
     );
 };
 
 const MenuContainer = () => {
     const LINKS = [
-        <Link onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)} key="about" className={`${Utils.isActiveClass('/about')} ${utilStyles.underlinedLink}`} href="/about">About</Link>,
-        <Link onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)} key="work" className={`${Utils.isActiveClass('/work')} ${utilStyles.underlinedLink}`} href="#">Work</Link>,
-        <Link onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)} key="projects" className={`${Utils.isActiveClass('/projects')} ${utilStyles.underlinedLink}`} href="#">Projects</Link>,
-        <Link onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)} key="contact" className={`${Utils.isActiveClass('/contact')} ${utilStyles.underlinedLink}`} href="#">Contact</Link>
+        'about',
+        'work',
+        'projects',
+        'contact'
     ];
     return (
         <div className={`${styles.menuContainer} ${utilStyles.col}`}>
-            {LINKS.map(l => l)}
+            {LINKS.map(title => (
+                <Link
+                  onClick={() => toggleMenu(isMenuOpened, setIsMenuOpened)}
+                  key={`${title}`}
+                  className={`${Utils.isActiveClass(`/${title}`)} ${utilStyles.underlinedLink}`}
+                  href={`/${title}`}>
+                    {`${title.charAt(0).toUpperCase()}${title.slice(1)}`}
+                </Link>
+            ))}
         </div>
     );
 };
