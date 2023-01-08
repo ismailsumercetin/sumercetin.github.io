@@ -49,6 +49,10 @@
   height: 8px;
 }
 
+.activeLink {
+  pointer-events: none;
+}
+
 .activeLink::after {
   background-color: rgba(234, 15, 30, .5);
 }
