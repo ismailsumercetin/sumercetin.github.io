@@ -15,9 +15,9 @@ export default function Header() {
     const linkSection = (
       <nav className={`${utilStyles.row} ${utilStyles.navigationContainer}`}>
         <Link className={`${isActiveClass('/about')} ${utilStyles.underlinedLink}`} href="/about">About</Link>
-        <Link className={`${isActiveClass('/work')} ${utilStyles.underlinedLink}`} href="/work">Work</Link>
-        <Link className={`${isActiveClass('/projects')} ${utilStyles.underlinedLink}`} href="/projects">Projects</Link>
-        <Link className={`${isActiveClass('/contact')} ${utilStyles.underlinedLink}`} href="/contact">Contact</Link>
+        <Link className={`${isActiveClass('/work')} ${utilStyles.underlinedLink}`} href="#">Work</Link>
+        <Link className={`${isActiveClass('/projects')} ${utilStyles.underlinedLink}`} href="#">Projects</Link>
+        <Link className={`${isActiveClass('/contact')} ${utilStyles.underlinedLink}`} href="#">Contact</Link>
       </nav>
     );
     return ( isSmall ? <MenuSection /> : linkSection)
