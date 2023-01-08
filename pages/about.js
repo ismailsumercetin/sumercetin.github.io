@@ -78,7 +78,7 @@ export default function About() {
               width={18}
               alt="arrow-right"
             />
-            <Link href="/files/sumercetin.pdf" target="_blank" className={`${aboutStyles.resume} ${utilStyles.underlinedLink}`}>Click To See My CV</Link>
+            <Link href="/files/sumercetin.pdf" target="_blank" className={`${aboutStyles.resume} ${utilStyles.underlinedLink}`}>See My CV</Link>
           </p>
           <p className={`${utilStyles.row}`}>
             <Image
@@ -88,7 +88,7 @@ export default function About() {
               width={18}
               alt="arrow-right"
             />
-            <Link href="/files/sumercetin_transcript.pdf" target="_blank" className={`${aboutStyles.transcript} ${utilStyles.underlinedLink}`}>Click To See My Transcript</Link>
+            <Link href="/files/sumercetin_transcript.pdf" target="_blank" className={`${aboutStyles.transcript} ${utilStyles.underlinedLink}`}>See My Transcript</Link>
           </p>
         </section>
       </div>
